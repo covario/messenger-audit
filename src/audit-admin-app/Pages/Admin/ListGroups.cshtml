@@ -1,0 +1,33 @@
+﻿@page
+@model Covario.AuditAdminApp.Pages.Admin.ListGroupsModel
+@{
+}
+@{
+    ViewData["Title"] = "Audited Groups";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h3>@ViewData["Title"]</h3>
+<form method="post">
+    <table class="table table-sm table-striped table-hover border-bottom">
+        <thead>
+            <tr>
+                <th>Group</th>
+                <th>Support Contact</th>
+                <th>Client Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var chat in Model.Chats)
+        {
+            <tr>
+                <td>
+                    <a href="/api/log/@chat.Id"><img src="/img/download.png" height="14px" width="14px"/></a>
+                    <a href="messageLog/@chat.Id">@chat.Title</a>
+                </td>
+                <td>@chat.SupportContact</td>
+                <td>@chat.ClientContact</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</form>

@@ -1,0 +1,27 @@
+﻿@page
+@model Covario.AuditAdminApp.Pages.Admin.ContactsModel
+@{
+    ViewData["Title"] = "Telegram Contacts";
+}
+<h3>@ViewData["Title"]</h3>
+<form method="post">
+    <table class="table table-sm table-striped table-hover border-bottom">
+        <thead>
+            <tr>
+                <th>PhoneNumber</th>
+                <th>Username</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var contact in Model.Contacts)
+        {
+            <tr>
+                <td>@contact.PhoneNumber</td>
+                <td>@contact.Username</td>
+                <td>@contact.FirstName @contact.LastName</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</form>

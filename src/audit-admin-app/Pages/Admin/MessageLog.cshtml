@@ -1,0 +1,32 @@
+﻿@page "{chatId}"
+@model Covario.AuditAdminApp.Pages.Admin.MessageLogModel
+
+@{
+}
+<h3>@Model.Title</h3>
+<form method="post">
+    <input type="hidden" name="chatId" id="chatId" value="@Model.ChatId" />
+    <table class="table table-sm table-striped table-hover border-bottom" id="messageList">
+        <thead>
+            <tr>
+                <th>Sent</th>
+                <th>Sender</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var msg in Model.Messages.Take(25))
+            {
+                <tr>
+                    <td style="min-width: 200px">@msg.Sent</td>
+                    <td style="min-width: 150px">@msg.Sender</td>
+                    <td>@msg.Text</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>
+@section scripts {
+    <script src="~/js/telegramMessage.js"></script>
+}

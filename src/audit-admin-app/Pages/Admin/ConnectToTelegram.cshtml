@@ -1,0 +1,53 @@
+﻿@page
+@using Telegram.Governor.Models
+@model Covario.AuditAdminApp.Pages.Admin.ConnectToTelegramModel
+@{
+    ViewData["Title"] = "Connect To Telegram";
+}
+<h3>@ViewData["Title"]</h3>
+<form method="post">
+    <input type="hidden" name="loadState" id="loadState" value="@Model.SessionStateName"/>
+    @if (Model.SessionState == TelegramSessionState.PendingServiceAccount)
+    {
+        <div class="form-group">
+            <label asp-for="ServiceAccount" class="col-form-label col-md-2">Service Account</label>
+            <div class="col-md-10">
+                <input asp-for="ServiceAccount" />
+            </div>
+        </div>
+    }
+    @if (Model.SessionState == TelegramSessionState.PendingCode)
+    {
+        <div class="form-group">
+            <label asp-for="ResponseCode" class="col-form-label col-md-2">ResponseCode</label>
+            <div class="col-md-10">
+                <input asp-for="ResponseCode" />
+            </div>
+        </div>
+    }
+    @if (Model.SessionState == TelegramSessionState.PendingPassword)
+    {
+        <div class="form-group">
+            <label asp-for="Password" class="col-form-label col-md-2">Password</label>
+            <div class="col-md-10">
+                <input asp-for="Password" />
+            </div>
+        </div>
+    }
+    <div class="form-group">
+        @if (Model.SessionState == TelegramSessionState.PendingServiceAccount || Model.SessionState == TelegramSessionState.PendingCode || Model.SessionState == TelegramSessionState.PendingPassword)
+        {
+            <button class="btn btn-outline-primary btn-sm">Connect</button>
+        }
+        else
+        {
+            <button type="submit" asp-page-handler="Disconnect">
+                Disconnect
+            </button>
+            <p>
+                This will allow you to disconnect the telegram session and set up a new session.<br />
+                If a different account is used old chats will not longer be monitored.
+            </p>
+        }
+    </div>
+</form>

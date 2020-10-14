@@ -1,0 +1,28 @@
+﻿@page
+@model Covario.AuditAdminApp.Pages.Admin.AddGroupModel
+@{
+     ViewData["Title"] = "Add Audited Telegram Group";
+ }
+<h3>@ViewData["Title"]</h3>
+
+<form method="post">
+    <div class="text-danger">@Model.Message</div>
+    <div class="form-group">
+        <label asp-for="ClientPhoneNumber" class="col-form-label col-md-2">Client Phone Number</label><br/>
+        <input asp-for="ClientPhoneNumber" />
+        <span asp-validation-for="ClientPhoneNumber" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SupportPhoneNumber" class="col-form-label col-md-2">Support Phone Number</label><br />
+        <input asp-for="SupportPhoneNumber" />
+        <span asp-validation-for="SupportPhoneNumber" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="GroupName" class="col-form-label col-md-2">Group Name</label><br />
+        <input asp-for="GroupName" />
+        <span asp-validation-for="GroupName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-outline-primary btn-sm">Create Group</button>
+    </div>
+</form>

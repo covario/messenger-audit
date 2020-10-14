@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "audit-admin-app", "audit-admin-app\audit-admin-app.csproj", "{10B1D350-0E5C-4DBF-ACA2-2DE75E5C65F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDLib", "TDLib\TDLib.csproj", "{B0B3DEAB-1BFC-4234-84DD-BC995D8F638A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDLib.Api", "TDLib.Api\TDLib.Api.csproj", "{644FB50B-1646-47DE-9C08-931BB8B4F4C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Telegram.Governor", "Telegram.Governor\Telegram.Governor.csproj", "{6E7228D1-E6F0-435F-9989-B8413319316E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_", "_", "{C33FB532-8930-41E9-A3E4-59A3E83AB813}"
+	ProjectSection(SolutionItems) = preProject
+		..\Dockerfile = ..\Dockerfile
+		..\nuget.config = ..\nuget.config
+		..\run.cmd = ..\run.cmd
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10B1D350-0E5C-4DBF-ACA2-2DE75E5C65F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10B1D350-0E5C-4DBF-ACA2-2DE75E5C65F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10B1D350-0E5C-4DBF-ACA2-2DE75E5C65F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10B1D350-0E5C-4DBF-ACA2-2DE75E5C65F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0B3DEAB-1BFC-4234-84DD-BC995D8F638A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0B3DEAB-1BFC-4234-84DD-BC995D8F638A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0B3DEAB-1BFC-4234-84DD-BC995D8F638A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0B3DEAB-1BFC-4234-84DD-BC995D8F638A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{644FB50B-1646-47DE-9C08-931BB8B4F4C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{644FB50B-1646-47DE-9C08-931BB8B4F4C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{644FB50B-1646-47DE-9C08-931BB8B4F4C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{644FB50B-1646-47DE-9C08-931BB8B4F4C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E7228D1-E6F0-435F-9989-B8413319316E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E7228D1-E6F0-435F-9989-B8413319316E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E7228D1-E6F0-435F-9989-B8413319316E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E7228D1-E6F0-435F-9989-B8413319316E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B823B8D-7E2C-4EA2-8EB7-FDF14ED1BBC2}
+	EndGlobalSection
+EndGlobal
